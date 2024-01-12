@@ -1,5 +1,6 @@
 import reactImg from "./assets/react-core-concepts.png";
-import conponentsImg from "./assets/components.png";
+import componentsImg from "./assets/components.png";
+import CORE_CONCEPTS from "./data.js"
 
 const reactDescriptions = ["Fundamental", "Crucial", "Core"];
 
@@ -22,12 +23,12 @@ function Header() {
   );
 }
 
-function CoreConcepts() {
+function CoreConcepts(props) {
   return (
     <li>
-      <img src="..." alt="..." />
-      <h3>TITLE</h3>
-      <p>DESCRIPTION</p>
+      <img src={props.img} alt="..." />
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
     </li>
   );
 }
