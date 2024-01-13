@@ -1,4 +1,4 @@
-function TabButton(props) {
+function TabButton({ children, isSelected, ...props }) {
   // or ({children})
 
   // function handleClick() {
@@ -10,7 +10,14 @@ function TabButton(props) {
 
   return (
     <li>
-      <button onClick={props.onClick}>{props.children}</button>
+      {
+        // <button className={isSelected ? "active" : undefined} onClick={onClick}>
+        // {...props} が onClick={onClick} に置き換わる
+        // 左辺が onClick でないと動かないので、そうでない場合は TabButton の呼び出し時の prop 変更せよ
+      }
+      <button className={isSelected ? "active" : undefined} {...props}>
+        {children}
+      </button>
     </li>
   );
 }

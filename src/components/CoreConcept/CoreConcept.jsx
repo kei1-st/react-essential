@@ -1,6 +1,6 @@
-import "./CoreConcepts.css";
+import "./CoreConcept.css";
 
-function CoreConcepts({ image, title, description }) {
+function CoreConcept({ image, title, description }) {
   return (
     <li>
       <img src={image} alt="..." />
@@ -10,4 +10,4 @@ function CoreConcepts({ image, title, description }) {
   );
 }
 
-export default CoreConcepts;
+export default CoreConcept;
